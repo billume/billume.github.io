@@ -1,0 +1,298 @@
+:root {
+  --page: #eef2f6;
+  --paper: #ffffff;
+  --ink: #152033;
+  --muted: #667085;
+  --line: #d9e1ea;
+  --accent: #2563eb;
+  --accent-soft: #eaf1ff;
+  --success-soft: #edf7ee;
+  --success-ink: #25633b;
+  --shadow: 0 24px 80px rgba(21, 32, 51, 0.13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+}
+
+.invoice-shell {
+  min-height: 100vh;
+  padding: 48px 20px;
+}
+
+.invoice {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  padding: 48px;
+  background: var(--paper);
+  border: 1px solid rgba(217, 225, 234, 0.8);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.invoice-header,
+.summary-grid,
+.footer-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.invoice-header {
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: clamp(2.25rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.muted,
+.brand span,
+td span {
+  color: var(--muted);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+  font-weight: 800;
+}
+
+.brand strong,
+.brand span,
+td strong,
+td span {
+  display: block;
+}
+
+.summary-grid {
+  grid-template-columns: 1fr 1fr minmax(220px, 0.75fr);
+  padding: 36px 0;
+}
+
+.summary-grid article,
+.footer-grid article {
+  min-width: 0;
+}
+
+.payment-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--accent-soft), #ffffff);
+}
+
+.amount {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+dl {
+  margin: 0;
+}
+
+.payment-card dl,
+.totals dl {
+  display: grid;
+  gap: 10px;
+}
+
+.payment-card div,
+.totals div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+dt {
+  color: var(--muted);
+}
+
+dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--success-soft);
+  color: var(--success-ink);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  vertical-align: top;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+thead th {
+  background: #f8fafc;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.totals {
+  display: flex;
+  justify-content: flex-end;
+  padding: 28px 0 36px;
+}
+
+.totals dl {
+  width: min(100%, 360px);
+}
+
+.grand-total {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 2px solid var(--ink);
+  font-size: 1.15rem;
+}
+
+.footer-grid {
+  grid-template-columns: 1fr 1fr;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.footer-grid p,
+.summary-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .invoice-shell {
+    padding: 20px 12px;
+  }
+
+  .invoice {
+    padding: 28px 20px;
+  }
+
+  .invoice-header,
+  .summary-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .summary-grid {
+    padding: 28px 0;
+  }
+
+  .totals {
+    justify-content: stretch;
+  }
+}
+
+@media print {
+  :root {
+    --page: #ffffff;
+    --shadow: none;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  .invoice-shell {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .invoice {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .table-wrap {
+    overflow: visible;
+  }
+}
