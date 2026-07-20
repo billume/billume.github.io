@@ -4,6 +4,10 @@ A static public preview of Billume's Minimal invoice template.
 
 The template is adapted from the Billume brand system and is designed for consultants, writers, coaches, and independent professional-service providers who need a quiet, clear invoice.
 
+## Edit it
+
+Yes. The page is a public, editable HTML/CSS template. Open the repository in GitHub, fork it to your account, and change `index.html` or `styles.css` to make it yours.
+
 ## Preview
 
 Live page: <https://billume.github.io/>

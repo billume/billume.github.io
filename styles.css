@@ -45,15 +45,24 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 8px 0 42px;
+  padding: 8px 0 24px;
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--ink);
   font-size: 1.08rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0;
   text-decoration: none;
+}
+
+.wordmark img {
+  display: block;
+  width: 34px;
+  height: 34px;
 }
 
 .site-header nav {
@@ -74,41 +83,19 @@ a {
   color: var(--coral);
 }
 
-.intro {
-  max-width: 760px;
-  padding: 34px 0 40px;
-}
-
-.eyebrow,
 .invoice-label {
   margin: 0 0 10px;
   color: var(--coral);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-h1,
 h2,
 h3,
 p {
   margin-top: 0;
-}
-
-h1 {
-  max-width: 760px;
-  margin-bottom: 18px;
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
-  line-height: 0.95;
-}
-
-.intro p {
-  max-width: 620px;
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 1.18rem;
 }
 
 .invoice {
@@ -136,7 +123,7 @@ h1 {
 .invoice-top h2 {
   margin-bottom: 0;
   font-size: clamp(2.35rem, 5vw, 4.5rem);
-  font-weight: 900;
+  font-weight: 650;
   line-height: 0.95;
 }
 
@@ -148,9 +135,10 @@ h1 {
   background: var(--paper);
 }
 
-.brand-block strong,
-td strong {
+.business-name,
+.item-name {
   display: block;
+  font-weight: 600;
 }
 
 .brand-block span,
@@ -171,7 +159,7 @@ td span,
 h3 {
   margin-bottom: 9px;
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -211,7 +199,7 @@ td:first-child {
 thead th {
   color: var(--quiet);
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -220,7 +208,7 @@ tbody tr:last-child td {
   border-bottom: 0;
 }
 
-td strong {
+td .item-name {
   margin-bottom: 4px;
 }
 
@@ -257,7 +245,7 @@ dt {
 
 dd {
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
   text-align: right;
 }
 
@@ -303,10 +291,6 @@ dd {
     justify-content: flex-start;
   }
 
-  .intro {
-    padding: 26px 0 28px;
-  }
-
   .invoice-top,
   .meta-grid,
   .summary {
@@ -341,7 +325,6 @@ dd {
   }
 
   .site-header,
-  .intro,
   .site-footer {
     display: none;
   }
