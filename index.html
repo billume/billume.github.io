@@ -3,154 +3,145 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Billume HTML Invoice Template</title>
+    <title>Minimal Invoice Template · Billume</title>
     <meta
       name="description"
-      content="A polished, printable HTML/CSS invoice template by Billume."
+      content="A quietly polished minimal invoice template for consultants, writers, coaches, and independent professional-service providers."
     >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="invoice-shell" aria-label="Invoice">
-      <section class="invoice">
-        <header class="invoice-header">
-          <div>
-            <p class="eyebrow">Invoice</p>
-            <h1>INV-2026-0042</h1>
-            <p class="muted">Issued July 20, 2026</p>
-          </div>
+    <main class="page" aria-label="Minimal invoice template">
+      <header class="site-header">
+        <a class="wordmark" href="https://billume.com/">billume</a>
+        <nav aria-label="Billume links">
+          <a href="https://billume.com/#invoice-creator">Invoice generator</a>
+          <a href="https://billume.com/invoice-templates/minimal">Minimal template</a>
+        </nav>
+      </header>
 
-          <div class="brand">
-            <span class="brand-mark" aria-hidden="true">B</span>
-            <div>
-              <strong>Billume Studio</strong>
-              <span>Design systems and billing tools</span>
-            </div>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Free invoice template</p>
+        <h1 id="page-title">Minimal invoice template</h1>
+        <p>
+          A restrained invoice that keeps attention on the essentials: what was
+          delivered, when it was due, and how to pay.
+        </p>
+      </section>
+
+      <section class="invoice" aria-label="Invoice preview">
+        <header class="invoice-top">
+          <div>
+            <p class="invoice-label">Invoice</p>
+            <h2>INV-1048</h2>
+          </div>
+          <div class="brand-block">
+            <strong>Northstar Studio</strong>
+            <span>Strategy and copywriting</span>
           </div>
         </header>
 
-        <section class="summary-grid" aria-label="Invoice parties and payment summary">
+        <section class="meta-grid" aria-label="Invoice details">
           <article>
-            <h2>From</h2>
+            <h3>From</h3>
             <p>
-              Billume Studio<br>
-              88 Market Street<br>
-              San Francisco, CA 94105<br>
-              hello@billume.com
+              Northstar Studio<br>
+              18 Grove Terrace<br>
+              Portland, OR 97205<br>
+              hello@northstar.example
             </p>
           </article>
-
           <article>
-            <h2>Bill To</h2>
+            <h3>Bill To</h3>
             <p>
-              Northstar Labs<br>
-              Attn: Finance Team<br>
-              14 Orchard Lane<br>
-              Austin, TX 78701
+              Fieldstone Goods<br>
+              Attn: Finance<br>
+              41 Mercer Street<br>
+              New York, NY 10013
             </p>
           </article>
-
-          <article class="payment-card">
-            <h2>Amount Due</h2>
-            <p class="amount">$4,820.00</p>
-            <dl>
-              <div>
-                <dt>Due Date</dt>
-                <dd>August 3, 2026</dd>
-              </div>
-              <div>
-                <dt>Status</dt>
-                <dd><span class="status">Due</span></dd>
-              </div>
-            </dl>
+          <article>
+            <h3>Issued</h3>
+            <p>July 20, 2026</p>
+            <h3>Due</h3>
+            <p>August 3, 2026</p>
           </article>
         </section>
 
-        <section class="line-items" aria-label="Invoice line items">
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Description</th>
-                  <th scope="col">Qty</th>
-                  <th scope="col">Rate</th>
-                  <th scope="col">Total</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <strong>Invoice experience design</strong>
-                    <span>Billing flow audit, layout system, and interaction notes</span>
-                  </td>
-                  <td>1</td>
-                  <td>$1,800.00</td>
-                  <td>$1,800.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>HTML/CSS implementation</strong>
-                    <span>Responsive invoice template with print-optimized styles</span>
-                  </td>
-                  <td>1</td>
-                  <td>$2,200.00</td>
-                  <td>$2,200.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>QA and PDF export polish</strong>
-                    <span>Cross-browser checks, spacing refinements, and file handoff</span>
-                  </td>
-                  <td>4</td>
-                  <td>$205.00</td>
-                  <td>$820.00</td>
-                </tr>
-              </tbody>
-            </table>
+        <section class="items" aria-label="Line items">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Service</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Rate</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Positioning workshop</strong>
+                  <span>Half-day strategy session and decision notes</span>
+                </td>
+                <td>1</td>
+                <td>$1,250.00</td>
+                <td>$1,250.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Homepage copy draft</strong>
+                  <span>Messaging, section copy, and revision pass</span>
+                </td>
+                <td>1</td>
+                <td>$1,900.00</td>
+                <td>$1,900.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Launch email sequence</strong>
+                  <span>Three-email sequence for announcement week</span>
+                </td>
+                <td>3</td>
+                <td>$420.00</td>
+                <td>$1,260.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="summary" aria-label="Invoice summary">
+          <div class="notes">
+            <h3>Payment Notes</h3>
+            <p>
+              Payment is due within 14 days by bank transfer. Please include the
+              invoice number so reconciliation stays simple.
+            </p>
           </div>
-        </section>
 
-        <section class="totals" aria-label="Invoice totals">
-          <dl>
+          <dl class="totals">
             <div>
               <dt>Subtotal</dt>
-              <dd>$4,820.00</dd>
+              <dd>$4,410.00</dd>
             </div>
             <div>
               <dt>Tax</dt>
               <dd>$0.00</dd>
             </div>
-            <div>
-              <dt>Discount</dt>
-              <dd>$0.00</dd>
-            </div>
-            <div class="grand-total">
-              <dt>Total Due</dt>
-              <dd>$4,820.00</dd>
+            <div class="total">
+              <dt>Total due</dt>
+              <dd>$4,410.00</dd>
             </div>
           </dl>
         </section>
-
-        <section class="footer-grid">
-          <article>
-            <h2>Payment Details</h2>
-            <p>
-              Bank: Example Commercial Bank<br>
-              Account: Billume Studio Operating<br>
-              Routing: 000000000<br>
-              Reference: INV-2026-0042
-            </p>
-          </article>
-
-          <article>
-            <h2>Notes</h2>
-            <p>
-              Thank you for partnering with Billume. Please include the invoice
-              reference with payment so reconciliation stays smooth.
-            </p>
-          </article>
-        </section>
       </section>
+
+      <footer class="site-footer">
+        <p>
+          Created by <a href="https://billume.com/">Billume</a>, the free invoice
+          generator for considered PDF invoices.
+        </p>
+      </footer>
     </main>
   </body>
 </html>

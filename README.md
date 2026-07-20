@@ -1,35 +1,22 @@
-# Billume HTML Invoice Template
+# Billume Minimal Invoice Template
 
-A polished, dependency-free HTML/CSS invoice template for freelancers, small studios, and SaaS teams that need a clean billing artifact without pulling in a UI framework.
+A static public preview of Billume's Minimal invoice template.
 
-The template is designed to work as:
-
-- a static invoice page
-- a printable or PDF-exported invoice
-- a starting point for app-rendered invoices
-- a visual reference for billing UI design
+The template is adapted from the Billume brand system and is designed for consultants, writers, coaches, and independent professional-service providers who need a quiet, clear invoice.
 
 ## Preview
 
-Open `index.html` in a browser. Use your browser's print dialog to save it as a PDF.
+Live page: <https://billume.github.io/>
 
-## What's Included
+## Files
 
-- `index.html` - semantic invoice markup with realistic sample content
-- `styles.css` - responsive screen and print styling
+- `index.html` - minimal invoice markup
+- `styles.css` - Billume-inspired responsive and print styles
 - `LICENSE` - MIT license
-
-## Customization
-
-Replace the sample business, client, line items, payment details, and note content in `index.html`.
-
-The visual system is intentionally restrained: neutral ink, soft blue accents, quiet spacing, and clear hierarchy. Brand colors can be adjusted from the CSS custom properties in `styles.css`.
 
 ## Attribution
 
-Created and maintained by [Billume](https://billume.com) as a practical design and developer resource.
-
-If you use this template, attribution is appreciated but not required.
+Created for [Billume](https://billume.com), the free invoice generator for considered PDF invoices.
 
 ## License
 
